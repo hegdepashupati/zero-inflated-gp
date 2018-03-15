@@ -1,0 +1,2 @@
+model_checkpoint_path: "onoff.ckpt"
+all_model_checkpoint_paths: "onoff.ckpt"
