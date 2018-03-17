@@ -23,7 +23,7 @@ class OnOffSVGP(Model):
     - Zf,Zg are matrices of inducing point locations, size Mf x D and Mg x D
     """
 
-    def __init__(self, X, Y, kernf, kerng, likelihood, Zf, Zg, mean_function=None, minibatch_size=None, q_diag=True,
+    def __init__(self, X, Y, kernf, kerng, likelihood, Zf, Zg, mean_function=None, minibatch_size=None, 
                  name='model'):
         Model.__init__(self, name)
         self.mean_function = mean_function or Zero()
@@ -31,7 +31,7 @@ class OnOffSVGP(Model):
         self.kerng = kerng
         self.likelihood = likelihood
         self.whiten = False
-        self.q_diag = q_diag
+        self.q_diag = True
 
         # save initial attributes for future plotting purpose
         Xtrain = DataHolder(X)
